@@ -24,7 +24,7 @@ then
 	rm /tmp/ssh-l7IjnT5mI3t0
 else
 	echo "White flag has been raised, stopping script."
-	sudo rm -- "$current/onTheMovev5.sh"
+	sudo rm -- "$current/onTheMove.sh"
 	exit
 fi
 }
@@ -62,6 +62,6 @@ check
 echo $target
 sleep 5
 echo $target>/tmp/ssh-7NalEN3oIs3n
-sudo cp $current/onTheMovev5.sh $target
-/bin/bash $target"onTheMovev5.sh" &
-sudo rm -- "$current/onTheMovev5.sh"
+sudo cp $current/onTheMove.sh $target
+/bin/bash $target"onTheMove.sh" &
+sudo rm -- "$current/onTheMove.sh"
