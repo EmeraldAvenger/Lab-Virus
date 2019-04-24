@@ -16,7 +16,7 @@ fi
 
 #Checks if the user has given up, either stops the virus, or randomly selects the next directory
 check(){
-if [ $giveUp = Stop ]
+if [[ $giveUp == Stop ]]
 then
 	echo "White flag has been raised, stopping script."
 	sudo rm -- "$current/onTheMove.sh"
