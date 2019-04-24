@@ -1,7 +1,8 @@
 #!/bin/bash
 #Important variables that make everything work
 current="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
-giveUp=`shuf -n 1 /Give_Up` 
+USER=`w -hs | cut -d " " -f 1`
+giveUp=`shuf -n 1 /home/$USER/Desktop/Give_Up` 
 doAnnoy=`shuf -i 0-5 -n 1`
 oldTarget=`sed 's:/::g' /tmp/ssh-7NalEN3oIs3n`
 
