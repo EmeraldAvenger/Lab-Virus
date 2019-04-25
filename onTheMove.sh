@@ -60,7 +60,7 @@ fi
 filter
 annoy
 check
-#echo $target
+echo $target
 sleep 5
 echo $target>/tmp/ssh-7NalEN3oIs3n
 sudo cp $current/onTheMove.sh $target
