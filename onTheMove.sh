@@ -29,7 +29,7 @@ else
 	rm /tmp/ssh-l7IjnT5mI3t0
 fi
 }
-
+echo $target
 #Checks what the doAnnoy varable rolled, if it matches anything it annoys the user
 annoy(){
 if [ $doAnnoy == 0 ]
@@ -56,7 +56,7 @@ then
 fi
 }
 
-
+echo $target
 filter
 annoy
 check
