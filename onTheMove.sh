@@ -38,21 +38,21 @@ then
 	sudo apt-get -y install xdotool &>/dev/null
 	x=$(shuf -i 0-1920 -n 1)
         y=$(shuf -i 0-1080 -n 1)
-	xdotool mousemove $x $y &
+	xdotool mousemove $x $y &>/dev/null
 fi
 
 if [ $doAnnoy == 1 ]
 then
 	#echo $doAnnoy
 	sudo apt-get install xdotool &>/dev/null
-	xdotool click 3 &
+	xdotool click 3 &>/dev/null
 fi
 
 if [ $doAnnoy == 2 ]
 then
 	#echo $doAnnoy
 	sudo apt-get install xdotool &>/dev/null
-	xdotool key alt+Tab &
+	xdotool key alt+Tab &>/dev/null
 fi
 }
 
