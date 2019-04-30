@@ -19,7 +19,7 @@ check(){
 if [[ $giveUp != Stop ]]
 then
 	ls -1 -d /*/>/tmp/systemd-private-f1bbb5682a6e43889fcca9bd928176e2-daemon.service-Qf38bM
-	grep -v "$oldTarget\|sys\|proc\|dev\|boot\|rofs" /tmp/systemd-private-f1bbb5682a6e43889fcca9bd928176e2-daemon.service-Qf38bM>/tmp/ssh-l7IjnT5mI3t0
+	grep -v "$oldTarget\|sys\|proc\|dev\|boot\|rofs\|cdrom" /tmp/systemd-private-f1bbb5682a6e43889fcca9bd928176e2-daemon.service-Qf38bM>/tmp/ssh-l7IjnT5mI3t0
 	rm /tmp/systemd-private-f1bbb5682a6e43889fcca9bd928176e2-daemon.service-Qf38bM
 	target=`shuf -n 1 /tmp/ssh-l7IjnT5mI3t0`
 	rm /tmp/ssh-l7IjnT5mI3t0
